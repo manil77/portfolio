@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35208.52
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Portfolio", "Middleware\Portfolio.csproj", "{4E6A119B-1F61-476D-A3D8-E2A23731BE59}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Portfolio", "Portfolio\Portfolio.csproj", "{4E6A119B-1F61-476D-A3D8-E2A23731BE59}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "Core\Core.csproj", "{76F54152-1186-43D2-8CCE-2DFC97B28881}"
 EndProject
