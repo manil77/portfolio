@@ -1150,12 +1150,14 @@ figure.dotted-bg {
 
 #about-section {
   margin-top: 7rem; }
-  #about-section .container {
-    background: #0389ff;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    padding-left: 50px;
-    padding-right: 50px; }
+    #about-section .container {
+        /*background: #0389ff;*/
+        background: linear-gradient(to bottom, #e0f7fa, #b2ebf2, #80deea);
+        padding-top: 50px;
+        padding-bottom: 50px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
     #about-section .container .author-wrap {
       margin-top: -150px; }
 

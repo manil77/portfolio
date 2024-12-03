@@ -1,6 +1,6 @@
-﻿using Application.Interfaces.UnitOfWork;
+﻿using Application.ApplicationInterfaces.UnitOfWork;
 using Application.Services.UnitOfWork;
-using Infrastructure.Interfaces.UnitOfWork;
+using Application.RepositoryInterfaces.UnitOfWork;
 using Infrastructure.Repository.UnitOfWork;
 using Infrastructure.SQLHelper;
 

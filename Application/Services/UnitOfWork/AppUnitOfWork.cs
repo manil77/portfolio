@@ -1,11 +1,6 @@
-﻿using Application.Interfaces;
-using Application.Interfaces.UnitOfWork;
-using Infrastructure.Interfaces.UnitOfWork;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Application.ApplicationInterfaces;
+using Application.ApplicationInterfaces.UnitOfWork;
+using Application.RepositoryInterfaces.UnitOfWork;
 
 namespace Application.Services.UnitOfWork
 {

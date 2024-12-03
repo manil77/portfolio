@@ -1,6 +1,5 @@
-﻿using Infrastructure.Repository;
-
-namespace Infrastructure.Interfaces.UnitOfWork
+﻿
+namespace Application.RepositoryInterfaces.UnitOfWork
 {
     public interface IRepositoryUnitOfWork
     {

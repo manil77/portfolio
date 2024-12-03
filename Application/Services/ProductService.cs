@@ -1,6 +1,6 @@
-﻿using Application.Interfaces;
+﻿using Application.ApplicationInterfaces;
 using Core.Entities;
-using Infrastructure.Interfaces.UnitOfWork;
+using Application.RepositoryInterfaces.UnitOfWork;
 
 namespace Application.Services
 {

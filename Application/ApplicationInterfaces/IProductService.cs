@@ -1,6 +1,6 @@
 ﻿using Core.Entities;
 
-namespace Application.Interfaces
+namespace Application.ApplicationInterfaces
 {
     public interface IProductService
     {

@@ -1,11 +1,6 @@
-﻿using Infrastructure.Interfaces;
-using Infrastructure.Interfaces.UnitOfWork;
-using Infrastructure.SQLHelper;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Infrastructure.SQLHelper;
+using Application.RepositoryInterfaces;
+using Application.RepositoryInterfaces.UnitOfWork;
 
 namespace Infrastructure.Repository.UnitOfWork
 {

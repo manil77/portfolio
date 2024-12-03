@@ -1,4 +1,4 @@
-using Application.Interfaces.UnitOfWork;
+using Application.ApplicationInterfaces.UnitOfWork;
 using Microsoft.AspNetCore.Mvc;
 using Middleware.Models;
 using System.Diagnostics;

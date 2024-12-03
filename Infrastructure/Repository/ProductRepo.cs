@@ -1,6 +1,7 @@
-﻿using Core.Entities;
-using Infrastructure.Interfaces;
+﻿using Application.RepositoryInterfaces;
+using Core.Entities;
 using DapperHelper = Infrastructure.SQLHelper.ISQLHelper;
+
 
 namespace Infrastructure.Repository
 {
@@ -19,7 +20,7 @@ namespace Infrastructure.Repository
         public IEnumerable<Product> GetAllProducts()
         {
             var result = _sqlHelper.ExecuteSqlScript<Product>("select * from products");
-            return result;  
+            return result;
         }
 
     }
