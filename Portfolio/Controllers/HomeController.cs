@@ -1,4 +1,5 @@
 using Application.ApplicationInterfaces.UnitOfWork;
+using Core.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Middleware.Models;
 using System.Diagnostics;
@@ -17,6 +18,7 @@ namespace Middleware.Controllers
 
         public IActionResult Index()
         {
+            throw new InvalidOperationException("This is a test exception to trigger HandleExceptionAsync.");
             return View();
         }
 

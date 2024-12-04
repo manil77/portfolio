@@ -1,0 +1,6 @@
+create table error_log ( 
+			id int identity(1,1) not null primary key, 
+			message character varying (1024) , 
+			stacktrace text,
+			timestamp datetime
+			);

@@ -73,6 +73,20 @@ namespace Infrastructure.SQLHelper
                 return result;
             }
         }
+
+        public void ExecuteRawSqlScript(
+            string sqlScript,
+            int? commandTimeout = null)
+        {
+            using (var connection = new SqlConnection(GetConnectionString()))
+            {
+                var result = connection.Query(
+                    sqlScript,                // SQL script to execute
+                    commandType: CommandType.Text, // CommandType.Text for raw SQL
+                    commandTimeout: commandTimeout  // Optional timeout
+                ).ToList();
+            }
+        }
         #endregion
     }
 }

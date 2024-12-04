@@ -1,9 +1,10 @@
-﻿using System.Globalization;
+﻿using Infrastructure.SQLHelper;
+using System.Globalization;
 
 namespace Middleware.Middlewares
 {
     public class ExampleMiddlewareOne
-    {
+    {   
         private readonly RequestDelegate _next;
 
         public ExampleMiddlewareOne(RequestDelegate next)
