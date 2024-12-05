@@ -1,17 +1,12 @@
 ﻿using Dapper;
-using Infrastructure.SQLHelper;
 using System.Data;
-using System.Data.Common;
-using System.Net;
 
 namespace Portfolio.Middlewares
 {
     public class GlobalExceptionMiddleware
     {
         private readonly RequestDelegate _next;
-        //private readonly ISQLHelper _sqlHelper;
-        private readonly IDbConnection _dbConnection; //wtf this?
-
+        private readonly IDbConnection _dbConnection;
 
         public GlobalExceptionMiddleware(RequestDelegate next/*, ISQLHelper sqlHelper */, IDbConnection dbconnection)
         {
@@ -34,9 +29,15 @@ namespace Portfolio.Middlewares
 
         public async Task HandleExceptionAsync(HttpContext context, Exception exception)
         {
-            string sql = $"insert into error_log(message, stacktrace, timestamp) values " +
-                         $"('{exception.Message}', '{exception.StackTrace}'," +
+
+            string currentURL = context.Request.Host.ToString() + context.Request.Path;
+
+
+            string sql = $"insert into error_log(url, exception_message, stack_trace, timestamp) values " +
+                         $"('{currentURL}','{exception.Message}', '{exception.StackTrace}'," +
                          $" '{DateTime.UtcNow}');";
+
+            
 
             //_sqlHelper.ExecuteRawSqlScript(sql);
             await _dbConnection.ExecuteAsync(sql, new
