@@ -1,5 +1,7 @@
 create database trial;
 
+use trial; 
+
 create table error_log ( 
 			id int identity(1,1) not null primary key, 
 			url character varying(512),
