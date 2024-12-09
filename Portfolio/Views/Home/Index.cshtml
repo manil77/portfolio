@@ -1,5 +1,8 @@
-﻿@{
+﻿
+@{
     ViewData["Title"] = "Home Page";
+    var url = Environment.GetEnvironmentVariable("ASPNETCORE_URLS").Split(";").First();
+    var result = url;
 }
 
 <style>
@@ -26,7 +29,7 @@
 @* Introduction *@
 <div class="untree_co-section pb-0" id="home-section">
     <div class="container">
-        <a href="https://localhost:44304/Admin/Home">click this</a>
+        <a href="@url/Admin/Home">click this</a>
         <div class="row justify-content-center text-center">
             <div class="col-md-7">
                 <h1 class="heading gsap-reveal-hero mb-3">
