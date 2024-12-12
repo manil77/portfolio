@@ -42,7 +42,7 @@ namespace Infrastructure.SQLHelper
         }
 
         #region Dapper Calls
-        public IEnumerable<T> ExecuteStoredProcedure<T>(string procedureName, object parameters = null, int? commandTimeout = null)
+        public IQueryable<T> ExecuteStoredProcedure<T>(string procedureName, object parameters = null, int? commandTimeout = null)
         {
             using (var connection = new SqlConnection(GetConnectionString()))
             {
@@ -51,12 +51,12 @@ namespace Infrastructure.SQLHelper
                     parameters,                    // Parameters (can be null if none)
                     commandType: CommandType.StoredProcedure,
                     commandTimeout: commandTimeout
-                ).ToList();
-                return result;
+                );
+                return result.AsQueryable();
             }
         }
 
-        public IEnumerable<T> ExecuteSqlScript<T>(
+        public IQueryable<T> ExecuteSqlScript<T>(
             string sqlScript,
             object parameters = null,
             int? commandTimeout = null)
@@ -68,9 +68,9 @@ namespace Infrastructure.SQLHelper
                     parameters,               // Parameters (if any)
                     commandType: CommandType.Text, // CommandType.Text for raw SQL
                     commandTimeout: commandTimeout  // Optional timeout
-                ).ToList();
+                );
 
-                return result;
+                return result.AsQueryable();
             }
         }
 

@@ -11,3 +11,17 @@ create table error_log (
 			timestamp datetime
 			);
 
+
+create table users(id int identity(1,1) not null primary key,
+			email character varying(256),
+			password character varying(256)
+)
+
+insert into users values ('test@gmail.com', 'Nepal@222');
+
+create table refresh_token(token  character varying(256) not null primary key,
+					user_id int,
+					issued_at datetime,
+					expires_at datetime,
+					foreign key (user_id) references users(id)
+)
