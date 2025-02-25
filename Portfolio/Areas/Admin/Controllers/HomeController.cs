@@ -7,7 +7,7 @@ namespace Portfolio.Areas.Admin.Controllers
     public class HomeController : Controller
     {
         [HttpGet]
-        [Authorize]
+        //[Authorize]
         public IActionResult Index()
         {
             return View();
