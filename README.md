@@ -17,7 +17,7 @@
 
 ## 4. Application (Web Project)
 - **Purpose**: Manages the presentation layer for a web application, including controllers, views, and static content.
-- **Contents**: MVC controllers, Razor views, and static files (CSS, JavaScript).
+- **Contents**: Controllers, Razor views, and static files (CSS, JavaScript).
 - **Dependencies**: Depends on **Application** and potentially **Infrastructure** for services and repositories.
 
 ## 5. WebApi
