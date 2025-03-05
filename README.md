@@ -15,7 +15,7 @@
 - **Contents**: Dapper repositories, external API clients, database migrations, and configurations.
 - **Dependencies**: Depends on **Core** and **Application** projects, implementing interfaces defined in **Application**.
 
-## 4. Application (Web Project or MVC Project)
+## 4. Application (Web Project)
 - **Purpose**: Manages the presentation layer for a web application, including controllers, views, and static content.
 - **Contents**: MVC controllers, Razor views, and static files (CSS, JavaScript).
 - **Dependencies**: Depends on **Application** and potentially **Infrastructure** for services and repositories.
